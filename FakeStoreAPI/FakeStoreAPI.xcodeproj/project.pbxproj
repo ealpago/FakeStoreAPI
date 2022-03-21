@@ -13,6 +13,8 @@
 		D111E1AF27E87302001C23E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D111E1AD27E87302001C23E2 /* Main.storyboard */; };
 		D111E1B127E87303001C23E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D111E1B027E87303001C23E2 /* Assets.xcassets */; };
 		D111E1B427E87303001C23E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D111E1B227E87303001C23E2 /* LaunchScreen.storyboard */; };
+		D111E1C027E874C4001C23E2 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1BF27E874C4001C23E2 /* NetworkServices.swift */; };
+		D111E1C227E877DD001C23E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1C127E877DD001C23E2 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D111E1B027E87303001C23E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D111E1B327E87303001C23E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D111E1B527E87303001C23E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D111E1BF27E874C4001C23E2 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		D111E1C127E877DD001C23E2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +60,16 @@
 		D111E1A627E87302001C23E2 /* FakeStoreAPI */ = {
 			isa = PBXGroup;
 			children = (
-				D111E1BD27E873FB001C23E2 /* Controllers */,
-				D111E1BC27E873F6001C23E2 /* Views */,
 				D111E1BB27E873EB001C23E2 /* Models */,
+				D111E1BC27E873F6001C23E2 /* Views */,
+				D111E1BD27E873FB001C23E2 /* Controllers */,
+				D111E1BE27E8749D001C23E2 /* Services */,
 				D111E1A727E87302001C23E2 /* AppDelegate.swift */,
 				D111E1A927E87302001C23E2 /* SceneDelegate.swift */,
 				D111E1B027E87303001C23E2 /* Assets.xcassets */,
 				D111E1B227E87303001C23E2 /* LaunchScreen.storyboard */,
 				D111E1B527E87303001C23E2 /* Info.plist */,
+				D111E1C127E877DD001C23E2 /* Constants.swift */,
 			);
 			path = FakeStoreAPI;
 			sourceTree = "<group>";
@@ -89,6 +95,14 @@
 				D111E1AB27E87302001C23E2 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D111E1BE27E8749D001C23E2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D111E1BF27E874C4001C23E2 /* NetworkServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D111E1C227E877DD001C23E2 /* Constants.swift in Sources */,
 				D111E1AC27E87302001C23E2 /* ViewController.swift in Sources */,
 				D111E1A827E87302001C23E2 /* AppDelegate.swift in Sources */,
+				D111E1C027E874C4001C23E2 /* NetworkServices.swift in Sources */,
 				D111E1AA27E87302001C23E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
