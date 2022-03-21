@@ -18,7 +18,6 @@
 		D111E1C427E87B3D001C23E2 /* FakeAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1C327E87B3D001C23E2 /* FakeAPIResponse.swift */; };
 		D111E1C627E87B86001C23E2 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1C527E87B86001C23E2 /* Rating.swift */; };
 		D111E1C927E88062001C23E2 /* ProductsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1C827E88062001C23E2 /* ProductsPageViewController.swift */; };
-		D111E1CB27E8807A001C23E2 /* ProductsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D111E1CA27E8807A001C23E2 /* ProductsPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		D111E1C327E87B3D001C23E2 /* FakeAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIResponse.swift; sourceTree = "<group>"; };
 		D111E1C527E87B86001C23E2 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		D111E1C827E88062001C23E2 /* ProductsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPageViewController.swift; sourceTree = "<group>"; };
-		D111E1CA27E8807A001C23E2 /* ProductsPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductsPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				D111E1C827E88062001C23E2 /* ProductsPageViewController.swift */,
-				D111E1CA27E8807A001C23E2 /* ProductsPage.storyboard */,
 				D111E1AD27E87302001C23E2 /* Main.storyboard */,
 			);
 			path = ProductsPage;
@@ -186,7 +183,6 @@
 				D111E1B427E87303001C23E2 /* LaunchScreen.storyboard in Resources */,
 				D111E1B127E87303001C23E2 /* Assets.xcassets in Resources */,
 				D111E1AF27E87302001C23E2 /* Main.storyboard in Resources */,
-				D111E1CB27E8807A001C23E2 /* ProductsPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
