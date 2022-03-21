@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D111E1A827E87302001C23E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1A727E87302001C23E2 /* AppDelegate.swift */; };
 		D111E1AA27E87302001C23E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1A927E87302001C23E2 /* SceneDelegate.swift */; };
-		D111E1AC27E87302001C23E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D111E1AB27E87302001C23E2 /* ViewController.swift */; };
 		D111E1AF27E87302001C23E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D111E1AD27E87302001C23E2 /* Main.storyboard */; };
 		D111E1B127E87303001C23E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D111E1B027E87303001C23E2 /* Assets.xcassets */; };
 		D111E1B427E87303001C23E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D111E1B227E87303001C23E2 /* LaunchScreen.storyboard */; };
@@ -24,7 +23,6 @@
 		D111E1A427E87302001C23E2 /* FakeStoreAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeStoreAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D111E1A727E87302001C23E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D111E1A927E87302001C23E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D111E1AB27E87302001C23E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D111E1AE27E87302001C23E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D111E1B027E87303001C23E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D111E1B327E87303001C23E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				D111E1C727E88036001C23E2 /* ProductsPage */,
-				D111E1AB27E87302001C23E2 /* ViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D111E1C227E877DD001C23E2 /* Constants.swift in Sources */,
-				D111E1AC27E87302001C23E2 /* ViewController.swift in Sources */,
 				D111E1A827E87302001C23E2 /* AppDelegate.swift in Sources */,
 				D111E1C027E874C4001C23E2 /* NetworkServices.swift in Sources */,
 				D111E1C427E87B3D001C23E2 /* FakeAPIResponse.swift in Sources */,
