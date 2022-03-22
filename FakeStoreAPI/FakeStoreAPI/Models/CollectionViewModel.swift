@@ -14,7 +14,9 @@ struct CollectionViewModel {
 struct CollectionViewItemModel {
     var cellType:CellType
     var imageView:String?
+    var category:String?
     var label:String?
+    var price:String?
 }
 
 enum CellType {

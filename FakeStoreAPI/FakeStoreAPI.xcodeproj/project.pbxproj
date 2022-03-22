@@ -77,6 +77,7 @@
 				D111E1BB27E873EB001C23E2 /* Models */,
 				D111E1BD27E873FB001C23E2 /* Scenes */,
 				D111E1BE27E8749D001C23E2 /* Services */,
+				D111E1D027E9B587001C23E2 /* CollectionCells */,
 				D111E1A727E87302001C23E2 /* AppDelegate.swift */,
 				D111E1A927E87302001C23E2 /* SceneDelegate.swift */,
 				D111E1B027E87303001C23E2 /* Assets.xcassets */,
@@ -117,7 +118,6 @@
 			children = (
 				D111E1C827E88062001C23E2 /* ProductsPageViewController.swift */,
 				D111E1AD27E87302001C23E2 /* Main.storyboard */,
-				D111E1D027E9B587001C23E2 /* CollectionCells */,
 			);
 			path = ProductsPage;
 			sourceTree = "<group>";
