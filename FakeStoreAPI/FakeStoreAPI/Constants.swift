@@ -8,7 +8,12 @@
 import Foundation
 
 struct APIConstants{
-    static var shared = APIConstants()
+    static let shared = APIConstants()
     
     let fakeStoreBaseURL = "https://fakestoreapi.com/"
+}
+
+struct CollectionViewsConstants{
+    static let shared = CollectionViewsConstants()
+    
 }

@@ -207,6 +207,10 @@
                             <constraint firstItem="ZAY-0Y-Cew" firstAttribute="leading" secondItem="533-St-dsG" secondAttribute="leading" id="fCj-92-im1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoriesCollectionView" destination="t1z-de-cWI" id="UOH-DV-QXe"/>
+                        <outlet property="imageCollectionView" destination="rSA-77-gyN" id="bHC-mT-F0A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSO-bp-BvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
