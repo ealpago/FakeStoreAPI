@@ -22,7 +22,6 @@ class ProductsPageViewController: UIViewController {
         imageCollectionView?.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
         imageCollectionView?.delegate = self
         imageCollectionView?.dataSource = self
-        
         categoriesCollectionView?.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
         categoriesCollectionView?.delegate = self
         categoriesCollectionView?.dataSource = self
