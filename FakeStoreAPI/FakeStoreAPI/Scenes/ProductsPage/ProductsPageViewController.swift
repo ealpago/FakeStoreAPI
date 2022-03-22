@@ -11,6 +11,7 @@ class ProductsPageViewController: UIViewController {
     
     @IBOutlet var imageCollectionView: UICollectionView?
     @IBOutlet var categoriesCollectionView: UICollectionView?
+    @IBOutlet var collectionViewHeightConstraint: NSLayoutConstraint?
     
     var imageCollectionViewCells:[CollectionViewModel] = []
     var categoriesCollectionViewCells:[CollectionViewModel] = []
@@ -39,6 +40,19 @@ class ProductsPageViewController: UIViewController {
         collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
         collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
         collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+        collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
         categoriesCollectionViewCells.append(CollectionViewModel(items: collectionViewItemModelArray))
         
         var imageViewItemModelArray:[CollectionViewItemModel] = []
@@ -47,7 +61,20 @@ class ProductsPageViewController: UIViewController {
         imageViewItemModelArray.append(CollectionViewItemModel(cellType: .image, imageView: "getir", category: nil, label: nil, price: nil))
         imageViewItemModelArray.append(CollectionViewItemModel(cellType: .image, imageView: "getir", category: nil, label: nil, price: nil))
         imageCollectionViewCells.append(CollectionViewModel(items: imageViewItemModelArray))
+        
+        imageCollectionView?.reloadData()
+        categoriesCollectionView?.reloadData()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            self.collectionViewHeightConstraint?.constant = self.categoriesCollectionView?.contentSize.height ?? 0
+            self.view.layoutIfNeeded()
+            self.view.setNeedsDisplay()
+        }
     }
+    
+    
+    
+    
 }
 
 extension ProductsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -86,6 +113,10 @@ extension ProductsPageViewController: UICollectionViewDelegate, UICollectionView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if (collectionView == imageCollectionView) {
+            func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+                return 0
+            }
+            
             return CGSize(width: 390, height: 120)
         }
         return CGSize(width: 80, height: 100)
