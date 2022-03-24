@@ -19,6 +19,7 @@ class ProductsPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "getir"
         
         imageCollectionView?.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
         imageCollectionView?.delegate = self
@@ -135,6 +136,8 @@ extension ProductsPageViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //        if (collectionView == categoriesCollectionView) {
         print("Collection View Tapped")
+        let vc = UIStoryboard.init(name: "ItemsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "ItemsViewController") as? ItemsViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
         //        }
     }
 }

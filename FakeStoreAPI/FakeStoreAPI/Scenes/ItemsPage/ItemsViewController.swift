@@ -9,7 +9,6 @@ import UIKit
 
 class ItemsViewController: UIViewController {
     
-    @IBOutlet var backButton: UIButton?
     @IBOutlet var categoryCollectionView: UICollectionView?
     @IBOutlet var itemsCollectionView: UICollectionView?
     @IBOutlet var filledButton: UIButton!
@@ -19,14 +18,4 @@ class ItemsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        print("Back Button Tapped")
-//        var vc = UIViewController()
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        vc = storyBoard.instantiateViewController(withIdentifier: "ProductsPageViewController") as! ProductsPageViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
-    }
-    
 }

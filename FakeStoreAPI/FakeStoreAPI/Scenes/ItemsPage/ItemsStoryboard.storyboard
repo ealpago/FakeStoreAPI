@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -21,34 +20,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hDm-cw-yrA" userLabel="Master Stack View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="AYQ-d2-kUc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="26.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBy-wd-EN3">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="26.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="XBx-PX-Vt3"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="default"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="backButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NHw-3Y-tXE"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürünler" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-8P-Yjn">
-                                                <rect key="frame" x="165" y="0.0" width="249" height="26.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.3808270969" green="0.2698426263" blue="0.64371007869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OFF-uR-OhK" userLabel="Category Collection View">
-                                        <rect key="frame" x="0.0" y="26.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <color key="backgroundColor" red="0.46476079663652925" green="0.28297683505108484" blue="0.79181219359898991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="pqv-AS-TVP"/>
@@ -72,7 +45,7 @@
                                         </cells>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-zg-IEA">
-                                        <rect key="frame" x="0.0" y="86.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gft-gd-Hbx">
                                                 <rect key="frame" x="10" y="15" width="67" height="30"/>
@@ -91,7 +64,7 @@
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-Ji-3aR" userLabel="Items Collection View">
-                                        <rect key="frame" x="0.0" y="146.5" width="414" height="705.5"/>
+                                        <rect key="frame" x="0.0" y="120" width="414" height="732"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bes-TD-1Tl">
                                             <size key="itemSize" width="134" height="52"/>
@@ -115,7 +88,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.3808270969" green="0.2698426263" blue="0.64371007869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.40437198839999999" green="0.24620817049999999" blue="0.68892788169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hDm-cw-yrA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="2hV-3u-BiS"/>
                             <constraint firstItem="hDm-cw-yrA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cPF-qo-oAV"/>
@@ -124,7 +97,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="WBy-wd-EN3" id="Jv3-s4-T9s"/>
                         <outlet property="categoryCollectionView" destination="OFF-uR-OhK" id="5Bq-DL-URB"/>
                         <outlet property="filledButton" destination="Gft-gd-Hbx" id="5Wp-rf-NiJ"/>
                         <outlet property="itemsCollectionView" destination="n7e-Ji-3aR" id="IrX-IP-5uG"/>
@@ -136,7 +108,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
