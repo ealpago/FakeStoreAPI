@@ -72,18 +72,18 @@ class ProductsPageViewController: UIViewController {
         }
     }
     
-//    func managingData(){
-//        NetworkManager.service.request(requestRoute: .getCategories, responseModel: FakeAPIResponse.self) { [weak self] details in
-//            guard let self = self else {return}
-//
-//            var collectionArray:[CollectionViewItemModel] = []
-//
-//            let collectionModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: details.category, label: nil, price: nil)
-//            collectionArray.append(collectionModel)
-//
-//            self.categoriesCollectionViewCells.append(CollectionViewModel(items: collectionArray))
-//        }
-//    }
+    //    func managingData(){
+    //        NetworkManager.service.request(requestRoute: .getCategories, responseModel: FakeAPIResponse.self) { [weak self] details in
+    //            guard let self = self else {return}
+    //
+    //            var collectionArray:[CollectionViewItemModel] = []
+    //
+    //            let collectionModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: details.category, label: nil, price: nil)
+    //            collectionArray.append(collectionModel)
+    //
+    //            self.categoriesCollectionViewCells.append(CollectionViewModel(items: collectionArray))
+    //        }
+    //    }
 }
 
 extension ProductsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -112,7 +112,7 @@ extension ProductsPageViewController: UICollectionViewDelegate, UICollectionView
             
             return cell2
             
-        
+            
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.CategoriesCollectionViewCellIdentifier, for: indexPath) as! CategoriesCollectionViewCell
             let cellModel = categoriesCollectionViewCells[indexPath.section].items[indexPath.row]!
@@ -120,14 +120,26 @@ extension ProductsPageViewController: UICollectionViewDelegate, UICollectionView
             return cell
         }
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if (collectionView == imageCollectionView) {
             func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
                 return 0
             }
-            
             return CGSize(width: 390, height: 120)
         }
         return CGSize(width: 80, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if (collectionView == categoriesCollectionView) {
+            print("Collection View Tapped")
+            var vc = UIViewController()
+            let storyBoard = UIStoryboard(name: "ItemsStoryboard", bundle: nil)
+            vc = storyBoard.instantiateViewController(withIdentifier: "ItemsViewController") as! ItemsViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+//        }
     }
 }

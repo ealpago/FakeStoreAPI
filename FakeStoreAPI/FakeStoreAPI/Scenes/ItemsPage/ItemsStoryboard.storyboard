@@ -13,7 +13,7 @@
         <!--Items View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ItemsViewController" customModule="FakeStoreAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemsViewController" id="Y6W-OH-hqX" customClass="ItemsViewController" customModule="FakeStoreAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,11 +21,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hDm-cw-yrA" userLabel="Master Stack View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="AYQ-d2-kUc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="AYQ-d2-kUc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="26.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBy-wd-EN3">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="XBx-PX-Vt3"/>
                                                 </constraints>
@@ -34,9 +34,12 @@
                                                     <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="default"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NHw-3Y-tXE"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürünler" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-8P-Yjn">
-                                                <rect key="frame" x="170" y="0.0" width="244" height="31"/>
+                                                <rect key="frame" x="165" y="0.0" width="249" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -45,8 +48,8 @@
                                         <color key="backgroundColor" red="0.3808270969" green="0.2698426263" blue="0.64371007869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OFF-uR-OhK" userLabel="Category Collection View">
-                                        <rect key="frame" x="0.0" y="31" width="414" height="60"/>
-                                        <color key="backgroundColor" red="0.4028794343648277" green="0.243046542952845" blue="0.61710858585656569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="414" height="60"/>
+                                        <color key="backgroundColor" red="0.46476079663652925" green="0.28297683505108484" blue="0.79181219359898991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="pqv-AS-TVP"/>
                                         </constraints>
@@ -68,8 +71,27 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-zg-IEA">
+                                        <rect key="frame" x="0.0" y="86.5" width="414" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gft-gd-Hbx">
+                                                <rect key="frame" x="10" y="15" width="67" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                    <color key="baseBackgroundColor" red="0.40437198839999999" green="0.24620817049999999" blue="0.68892788169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Gft-gd-Hbx" firstAttribute="top" secondItem="dPR-zg-IEA" secondAttribute="top" constant="15" id="HON-Tq-cn6"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gft-gd-Hbx" secondAttribute="bottom" constant="15" id="Iaw-9M-7CC"/>
+                                            <constraint firstItem="Gft-gd-Hbx" firstAttribute="leading" secondItem="dPR-zg-IEA" secondAttribute="leading" constant="10" id="SrK-Av-sI7"/>
+                                            <constraint firstAttribute="height" constant="60" id="XIN-i2-bK9"/>
+                                        </constraints>
+                                    </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-Ji-3aR" userLabel="Items Collection View">
-                                        <rect key="frame" x="0.0" y="91" width="414" height="761"/>
+                                        <rect key="frame" x="0.0" y="146.5" width="414" height="705.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bes-TD-1Tl">
                                             <size key="itemSize" width="134" height="52"/>
@@ -101,6 +123,12 @@
                             <constraint firstAttribute="bottom" secondItem="hDm-cw-yrA" secondAttribute="bottom" id="u5l-WR-gmd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="WBy-wd-EN3" id="Jv3-s4-T9s"/>
+                        <outlet property="categoryCollectionView" destination="OFF-uR-OhK" id="5Bq-DL-URB"/>
+                        <outlet property="filledButton" destination="Gft-gd-Hbx" id="5Wp-rf-NiJ"/>
+                        <outlet property="itemsCollectionView" destination="n7e-Ji-3aR" id="IrX-IP-5uG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

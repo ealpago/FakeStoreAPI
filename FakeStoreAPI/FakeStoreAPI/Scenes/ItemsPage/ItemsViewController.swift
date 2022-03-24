@@ -8,22 +8,26 @@
 import UIKit
 
 class ItemsViewController: UIViewController {
-
+    
+    @IBOutlet var backButton: UIButton?
+    @IBOutlet var categoryCollectionView: UICollectionView?
+    @IBOutlet var itemsCollectionView: UICollectionView?
+    @IBOutlet var filledButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        print("Back Button Tapped")
+        var vc = UIViewController()
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        vc = storyBoard.instantiateViewController(withIdentifier: "ProductsPageViewController") as! ProductsPageViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }
