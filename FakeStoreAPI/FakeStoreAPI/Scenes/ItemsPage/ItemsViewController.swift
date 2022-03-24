@@ -15,6 +15,9 @@ class ItemsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "ürünler"
+        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.prefersLargeTitles = true
 
         // Do any additional setup after loading the view.
     }

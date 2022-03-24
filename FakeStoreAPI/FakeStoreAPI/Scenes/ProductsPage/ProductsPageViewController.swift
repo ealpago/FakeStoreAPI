@@ -19,8 +19,9 @@ class ProductsPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "getir"
-        
+        navigationItem.title = "getir"
+        navigationItem.backButtonTitle = ""
+    
         imageCollectionView?.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
         imageCollectionView?.delegate = self
         imageCollectionView?.dataSource = self

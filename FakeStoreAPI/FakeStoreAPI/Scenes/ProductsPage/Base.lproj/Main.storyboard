@@ -204,7 +204,7 @@
                             <constraint firstItem="ZAY-0Y-Cew" firstAttribute="leading" secondItem="533-St-dsG" secondAttribute="leading" id="fCj-92-im1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DEc-18-8iR"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="DEc-18-8iR"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="t1z-de-cWI" id="UOH-DV-QXe"/>
                         <outlet property="collectionViewHeightConstraint" destination="SDl-nb-YRR" id="GpZ-GF-4WX"/>
