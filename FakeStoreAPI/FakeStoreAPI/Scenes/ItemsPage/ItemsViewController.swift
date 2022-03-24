@@ -22,12 +22,11 @@ class ItemsViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         print("Back Button Tapped")
-        var vc = UIViewController()
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        vc = storyBoard.instantiateViewController(withIdentifier: "ProductsPageViewController") as! ProductsPageViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-
+//        var vc = UIViewController()
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        vc = storyBoard.instantiateViewController(withIdentifier: "ProductsPageViewController") as! ProductsPageViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
     }
     
 }

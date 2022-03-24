@@ -133,13 +133,8 @@ extension ProductsPageViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if (collectionView == categoriesCollectionView) {
-            print("Collection View Tapped")
-            var vc = UIViewController()
-            let storyBoard = UIStoryboard(name: "ItemsStoryboard", bundle: nil)
-            vc = storyBoard.instantiateViewController(withIdentifier: "ItemsViewController") as! ItemsViewController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-//        }
+        //        if (collectionView == categoriesCollectionView) {
+        print("Collection View Tapped")
+        //        }
     }
 }
