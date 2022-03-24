@@ -65,16 +65,25 @@ class ProductsPageViewController: UIViewController {
         imageCollectionView?.reloadData()
         categoriesCollectionView?.reloadData()
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+        DispatchQueue.main.asyncAfter(deadline: .now()){
             self.collectionViewHeightConstraint?.constant = self.categoriesCollectionView?.contentSize.height ?? 0
             self.view.layoutIfNeeded()
             self.view.setNeedsDisplay()
         }
     }
     
-    
-    
-    
+//    func managingData(){
+//        NetworkManager.service.request(requestRoute: .getCategories, responseModel: FakeAPIResponse.self) { [weak self] details in
+//            guard let self = self else {return}
+//
+//            var collectionArray:[CollectionViewItemModel] = []
+//
+//            let collectionModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: details.category, label: nil, price: nil)
+//            collectionArray.append(collectionModel)
+//
+//            self.categoriesCollectionViewCells.append(CollectionViewModel(items: collectionArray))
+//        }
+//    }
 }
 
 extension ProductsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{

@@ -26,7 +26,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     func setupCell(cellModel: CollectionViewItemModel) {
         itemModel = cellModel
         if let itemModel = itemModel {
-            categoryName?.text = itemModel.label
+            categoryName?.text = itemModel.category
             imageView?.image = UIImage(named: itemModel.imageView ?? "deneme2")
         }
     }
