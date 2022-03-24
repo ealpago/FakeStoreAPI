@@ -11,14 +11,51 @@ class ItemsViewController: UIViewController {
     
     @IBOutlet var categoryCollectionView: UICollectionView?
     @IBOutlet var itemsCollectionView: UICollectionView?
-    @IBOutlet var filledButton: UIButton!
+    @IBOutlet var filledButton: UIButton?
+    
+    var itemsCollectionViewCell:[CollectionViewModel] = []
+    var categoriesCollectionViewCells:[CollectionViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "ürünler"
         self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.prefersLargeTitles = true
-
         // Do any additional setup after loading the view.
     }
 }
+
+extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (collectionView == itemsCollectionView){
+            return itemsCollectionViewCell[section].items.count
+        } else {
+            return categoriesCollectionViewCells[section].items.count
+        }
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if (collectionView == itemsCollectionView){
+            return itemsCollectionViewCell.count
+        } else {
+            return categoriesCollectionViewCells.count
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if (collectionView == itemsCollectionView) {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCollectionViewCell", for: indexPath) as! ItemsCollectionViewCell
+            let cellModel = itemsCollectionViewCell[indexPath.section].items[indexPath.row]!
+            cell.setupCell(cellModel: cellModel)
+            return cell
+        } else {
+            let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCategoryCollectionViewCell", for: indexPath) as! ItemsCategoryCollectionViewCell
+            let cell2Model = categoriesCollectionViewCells[indexPath.section].items[indexPath.row]!
+            cell2.setupCell(cellModel: cell2Model)
+            return cell2
+        }
+    }
+
+
+}
+
