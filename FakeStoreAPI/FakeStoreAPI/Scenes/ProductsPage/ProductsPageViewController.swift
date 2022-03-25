@@ -29,11 +29,11 @@ class ProductsPageViewController: UIViewController {
         categoriesCollectionView?.delegate = self
         categoriesCollectionView?.dataSource = self
         
-        var collectionViewItemModelArray:[CollectionViewItemModel] = []
-        for _ in 0...30{
-            collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
-        }
-        categoriesCollectionViewCells.append(CollectionViewModel(items: collectionViewItemModelArray))
+//        var collectionViewItemModelArray:[CollectionViewItemModel] = []
+//        for _ in 0...30{
+//            collectionViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "Damacana", price: nil))
+//        }
+//        categoriesCollectionViewCells.append(CollectionViewModel(items: collectionViewItemModelArray))
         
         var imageViewItemModelArray:[CollectionViewItemModel] = []
         for _ in 0...30{
@@ -42,26 +42,32 @@ class ProductsPageViewController: UIViewController {
         imageCollectionViewCells.append(CollectionViewModel(items: imageViewItemModelArray))
         
         imageCollectionView?.reloadData()
-        categoriesCollectionView?.reloadData()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()){
-            self.collectionViewHeightConstraint?.constant = self.categoriesCollectionView?.contentSize.height ?? 0
-            self.view.layoutIfNeeded()
-            self.view.setNeedsDisplay()
-        }
+//        categoriesCollectionView?.reloadData()
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now()){
+//            self.collectionViewHeightConstraint?.constant = self.categoriesCollectionView?.contentSize.height ?? 0
+//            self.view.layoutIfNeeded()
+//            self.view.setNeedsDisplay()
+//        }
+        managingData()
     }
     
-//        func managingData(){
-//            NetworkManager.service.request(requestRoute: .getCategories, responseModel: [String].self) { details in
-//
-//                var categoryArray:[CollectionViewItemModel] = []
-//
-//                for category in details{
-//                    let categoryModel = CollectionViewItemModel(cellType: .categories, imageView: "deneme2", category: details[], label: nil, price: nil)
-//                }
-//
-//            }
-//        }
+        func managingData(){
+            NetworkManager.service.request(requestRoute: .getCategories, responseModel: [String].self) { [weak self] details in
+                guard let self = self else {return}
+
+                var categoryArray:[CollectionViewItemModel] = []
+
+                for item in details{
+                    let categoryModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: item, label: nil, price: nil)
+                    categoryArray.append(categoryModel)
+                }
+                self.categoriesCollectionViewCells.append(CollectionViewModel(items: categoryArray))
+                DispatchQueue.main.async {
+                    self.categoriesCollectionView?.reloadData()
+                }
+            }
+        }
     
 }
 

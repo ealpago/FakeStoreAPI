@@ -125,7 +125,7 @@
                                 <rect key="frame" x="0.0" y="138" width="414" height="758"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mqm-kl-SX0">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="940"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TN-lr-mQe" userLabel="Image View">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -152,13 +152,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ple-xJ-Mfe">
-                                                <rect key="frame" x="0.0" y="120" width="414" height="70"/>
+                                                <rect key="frame" x="0.0" y="120" width="414" height="820"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t1z-de-cWI">
-                                                        <rect key="frame" x="10" y="10" width="394" height="50"/>
+                                                        <rect key="frame" x="10" y="10" width="394" height="800"/>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="SDl-nb-YRR"/>
+                                                            <constraint firstAttribute="height" constant="800" id="SDl-nb-YRR"/>
                                                         </constraints>
                                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nba-F8-IiT">
                                                             <size key="itemSize" width="80" height="100"/>
