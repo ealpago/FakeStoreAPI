@@ -34,13 +34,14 @@ class ItemsViewController: UIViewController {
 //        }
 //        itemsCollectionViewCell.append(CollectionViewModel(items: itemsViewItemModelArray))
         
-        var categoriesModelArray:[CollectionViewItemModel] = []
-        for _ in 0...30 {
-            categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        }
-        categoriesCollectionViewCells.append(CollectionViewModel(items: categoriesModelArray))
+//        var categoriesModelArray:[CollectionViewItemModel] = []
+//        for _ in 0...30 {
+//            categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+//        }
+//        categoriesCollectionViewCells.append(CollectionViewModel(items: categoriesModelArray))
         
         managingData()
+        managingCategoryLabelData()
     }
     
     func managingData(){
@@ -56,6 +57,23 @@ class ItemsViewController: UIViewController {
             self.itemsCollectionViewCell.append(CollectionViewModel(items: itemArray))
             DispatchQueue.main.async {
                 self.itemsCollectionView?.reloadData()
+            }
+        }
+    }
+    
+    func managingCategoryLabelData(){
+        NetworkManager.service.request(requestRoute: .getCategories, responseModel: [String].self) { [weak self] details in
+            guard let self = self else {return}
+
+            var categoryArray:[CollectionViewItemModel] = []
+
+            for item in details{
+                let categoryModel = CollectionViewItemModel(cellType: .label, imageView: nil, category: item, label: nil, price: nil)
+                categoryArray.append(categoryModel)
+            }
+            self.categoriesCollectionViewCells.append(CollectionViewModel(items: categoryArray))
+            DispatchQueue.main.async {
+                self.categoryCollectionView?.reloadData()
             }
         }
     }
