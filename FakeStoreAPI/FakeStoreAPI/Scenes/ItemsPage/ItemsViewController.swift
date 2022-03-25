@@ -29,42 +29,30 @@ class ItemsViewController: UIViewController {
         categoryCollectionView?.dataSource = self
         
         var itemsViewItemModelArray:[CollectionViewItemModel] = []
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        for _ in 0...30 {
+            itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        }
         itemsCollectionViewCell.append(CollectionViewModel(items: itemsViewItemModelArray))
         
         var categoriesModelArray:[CollectionViewItemModel] = []
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        for _ in 0...30 {
+            categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        }
         categoriesCollectionViewCells.append(CollectionViewModel(items: categoriesModelArray))
         
-        
-        // Do any additional setup after loading the view.
     }
+    
+//    func managingData(){
+//        NetworkManager.service.request(requestRoute: .products, responseModel: FakeAPIResponse.self) { [weak self] details in
+//
+//            var itemArray:[CollectionViewItemModel] = []
+//
+//            for item in details {
+//                let postModel = CollectionViewItemModel(cellType: .categories, imageView: item , category: details.category, label: details.title, price: "15.30")
+//            }
+//
+//        }
+//    }
 }
 
 extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -97,7 +85,5 @@ extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSo
             return cell2
         }
     }
-    
-    
 }
 
