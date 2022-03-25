@@ -50,7 +50,7 @@ class ItemsViewController: UIViewController {
             var itemArray:[CollectionViewItemModel] = []
 
             for item in details{
-                let itemModel = CollectionViewItemModel(cellType: .categories, imageView: item.image, category: item.category, label: item.title, price: "\(String(describing: item.price))")
+                let itemModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: item.category, label: item.title, price: "\(item.price ?? 15)")
                 itemArray.append(itemModel)
             }
             self.itemsCollectionViewCell.append(CollectionViewModel(items: itemArray))

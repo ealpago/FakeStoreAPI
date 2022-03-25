@@ -29,6 +29,11 @@ class ItemsCollectionViewCell: UICollectionViewCell {
     func setupCell(cellModel: CollectionViewItemModel) {
         itemModel = cellModel
         if let itemModel = itemModel {
+//            DispatchQueue.main.async {
+//                let imageUrlPath = itemModel.imageView ?? ""
+//                guard let imageURL = URL(string: imageUrlPath) else {return}
+//                self.imageView?.downloaded(from: imageURL)
+//            }
             itemLabel?.text = itemModel.label
             priceLabel?.text = itemModel.price
             imageView?.image = UIImage(named: itemModel.imageView ?? "deneme2")
