@@ -25,14 +25,14 @@ struct FakeAPIResponse : Codable {
         case rating
         case title = "title"
     }
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        category = try values.decodeIfPresent(String.self, forKey: .category)
-        descriptionField = try values.decodeIfPresent(String.self, forKey: .descriptionField)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        image = try values.decodeIfPresent(String.self, forKey: .image)
-        price = try values.decodeIfPresent(Float.self, forKey: .price)
-        rating = try Rating(from: decoder)
-        title = try values.decodeIfPresent(String.self, forKey: .title)
-    }
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        category = try values.decodeIfPresent(String.self, forKey: .category)
+//        descriptionField = try values.decodeIfPresent(String.self, forKey: .descriptionField)
+//        id = try values.decodeIfPresent(Int.self, forKey: .id)
+//        image = try values.decodeIfPresent(String.self, forKey: .image)
+//        price = try values.decodeIfPresent(Float.self, forKey: .price)
+//        rating = try Rating(from: decoder)
+//        title = try values.decodeIfPresent(String.self, forKey: .title)
+//    }
 }

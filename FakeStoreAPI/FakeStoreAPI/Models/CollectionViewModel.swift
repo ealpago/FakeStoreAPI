@@ -22,4 +22,5 @@ struct CollectionViewItemModel {
 enum CellType {
     case image
     case categories
+    case label
 }
