@@ -40,19 +40,21 @@ class ItemsViewController: UIViewController {
         }
         categoriesCollectionViewCells.append(CollectionViewModel(items: categoriesModelArray))
         
+        managingData()
     }
     
-//    func managingData(){
-//        NetworkManager.service.request(requestRoute: .products, responseModel: FakeAPIResponse.self) { [weak self] details in
-//
-//            var itemArray:[CollectionViewItemModel] = []
-//
-//            for item in details {
-//                let postModel = CollectionViewItemModel(cellType: .categories, imageView: item , category: details.category, label: details.title, price: "15.30")
-//            }
-//
-//        }
-//    }
+    func managingData(){
+        NetworkManager.service.request(requestRoute: .products, responseModel: [FakeAPIResponse].self) { details in
+
+            var itemArray:[CollectionViewItemModel] = []
+
+            for item in details{
+                itemArray.append(CollectionViewItemModel(cellType: .categories, imageView: item.image, category: item.category, label: item.title, price: "\(item.price)"))
+            }
+
+        }
+    }
+    
 }
 
 extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{

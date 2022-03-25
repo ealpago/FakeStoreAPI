@@ -49,20 +49,22 @@ class ProductsPageViewController: UIViewController {
             self.view.layoutIfNeeded()
             self.view.setNeedsDisplay()
         }
+        managingData()
     }
     
-    //    func managingData(){
-    //        NetworkManager.service.request(requestRoute: .getCategories, responseModel: FakeAPIResponse.self) { [weak self] details in
-    //            guard let self = self else {return}
-    //
-    //            var collectionArray:[CollectionViewItemModel] = []
-    //
-    //            let collectionModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: details.category, label: nil, price: nil)
-    //            collectionArray.append(collectionModel)
-    //
-    //            self.categoriesCollectionViewCells.append(CollectionViewModel(items: collectionArray))
-    //        }
-    //    }
+        func managingData(){
+            NetworkManager.service.request(requestRoute: .getCategories, responseModel: [String].self) { [weak self] details in
+                guard let self = self else {return}
+
+//                var collectionArray:[CollectionViewItemModel] = []
+//
+//                let collectionModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: details.category, label: nil, price: nil)
+//                collectionArray.append(collectionModel)
+//
+//                self.categoriesCollectionViewCells.append(CollectionViewModel(items: collectionArray))
+            }
+        }
+    
 }
 
 extension ProductsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
