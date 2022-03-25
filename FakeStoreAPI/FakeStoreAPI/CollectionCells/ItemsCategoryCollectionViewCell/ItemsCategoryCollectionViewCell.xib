@@ -33,6 +33,9 @@
                 <constraint firstItem="p3J-P1-DWX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rFD-ZJ-u26"/>
             </constraints>
             <size key="customSize" width="123" height="29"/>
+            <connections>
+                <outlet property="categoryLabel" destination="p3J-P1-DWX" id="SkB-Vm-v8S"/>
+            </connections>
             <point key="canvasLocation" x="184.78260869565219" y="96.763392857142847"/>
         </collectionViewCell>
     </objects>
