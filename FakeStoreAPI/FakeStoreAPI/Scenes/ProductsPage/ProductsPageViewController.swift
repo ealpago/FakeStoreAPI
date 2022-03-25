@@ -49,21 +49,19 @@ class ProductsPageViewController: UIViewController {
             self.view.layoutIfNeeded()
             self.view.setNeedsDisplay()
         }
-        managingData()
     }
     
-        func managingData(){
-            NetworkManager.service.request(requestRoute: .getCategories, responseModel: [String].self) { [weak self] details in
-                guard let self = self else {return}
-
-//                var collectionArray:[CollectionViewItemModel] = []
+//        func managingData(){
+//            NetworkManager.service.request(requestRoute: .getCategories, responseModel: [String].self) { details in
 //
-//                let collectionModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: details.category, label: nil, price: nil)
-//                collectionArray.append(collectionModel)
+//                var categoryArray:[CollectionViewItemModel] = []
 //
-//                self.categoriesCollectionViewCells.append(CollectionViewModel(items: collectionArray))
-            }
-        }
+//                for category in details{
+//                    let categoryModel = CollectionViewItemModel(cellType: .categories, imageView: "deneme2", category: details[], label: nil, price: nil)
+//                }
+//
+//            }
+//        }
     
 }
 

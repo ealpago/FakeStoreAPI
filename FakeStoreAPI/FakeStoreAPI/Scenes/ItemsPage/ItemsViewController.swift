@@ -28,11 +28,11 @@ class ItemsViewController: UIViewController {
         categoryCollectionView?.delegate = self
         categoryCollectionView?.dataSource = self
         
-        var itemsViewItemModelArray:[CollectionViewItemModel] = []
-        for _ in 0...30 {
-            itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-        }
-        itemsCollectionViewCell.append(CollectionViewModel(items: itemsViewItemModelArray))
+//        var itemsViewItemModelArray:[CollectionViewItemModel] = []
+//        for _ in 0...30 {
+//            itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+//        }
+//        itemsCollectionViewCell.append(CollectionViewModel(items: itemsViewItemModelArray))
         
         var categoriesModelArray:[CollectionViewItemModel] = []
         for _ in 0...30 {
@@ -44,14 +44,19 @@ class ItemsViewController: UIViewController {
     }
     
     func managingData(){
-        NetworkManager.service.request(requestRoute: .products, responseModel: [FakeAPIResponse].self) { details in
+        NetworkManager.service.request(requestRoute: .products, responseModel: [FakeAPIResponse].self) { [weak self] details in
+            guard let self = self else {return}
 
             var itemArray:[CollectionViewItemModel] = []
 
             for item in details{
-                itemArray.append(CollectionViewItemModel(cellType: .categories, imageView: item.image, category: item.category, label: item.title, price: "\(item.price)"))
+                let itemModel = CollectionViewItemModel(cellType: .categories, imageView: item.image, category: item.category, label: item.title, price: "\(String(describing: item.price))")
+                itemArray.append(itemModel)
             }
-
+            self.itemsCollectionViewCell.append(CollectionViewModel(items: itemArray))
+            DispatchQueue.main.async {
+                self.itemsCollectionView?.reloadData()
+            }
         }
     }
     

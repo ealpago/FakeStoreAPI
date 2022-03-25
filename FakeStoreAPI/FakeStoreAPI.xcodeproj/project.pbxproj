@@ -28,6 +28,7 @@
 		D16489FC27EC60C700B0A603 /* ItemsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16489FA27EC60C700B0A603 /* ItemsCollectionViewCell.xib */; };
 		D16489FF27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16489FD27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift */; };
 		D1648A0027ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16489FE27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib */; };
+		D18BC09627EDF3C10079FAEB /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D16489FA27EC60C700B0A603 /* ItemsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCollectionViewCell.xib; sourceTree = "<group>"; };
 		D16489FD27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D16489FE27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		D111E1A627E87302001C23E2 /* FakeStoreAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D18BC09427EDF3A50079FAEB /* Extensions */,
 				D111E1BB27E873EB001C23E2 /* Models */,
 				D111E1BD27E873FB001C23E2 /* Scenes */,
 				D111E1BE27E8749D001C23E2 /* Services */,
@@ -200,6 +203,14 @@
 			path = ItemsCategoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		D18BC09427EDF3A50079FAEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +295,7 @@
 				D16489FB27EC60C700B0A603 /* ItemsCollectionViewCell.swift in Sources */,
 				D111E1C027E874C4001C23E2 /* NetworkServices.swift in Sources */,
 				D16489F527EC58ED00B0A603 /* ItemsViewController.swift in Sources */,
+				D18BC09627EDF3C10079FAEB /* UIImageViewExtension.swift in Sources */,
 				D111E1C427E87B3D001C23E2 /* FakeAPIResponse.swift in Sources */,
 				D111E1AA27E87302001C23E2 /* SceneDelegate.swift in Sources */,
 				D16489FF27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift in Sources */,
