@@ -20,7 +20,14 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "ürünler"
         self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        itemsCollectionView?.register(UINib(nibName: "ItemsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCollectionViewCell")
+        itemsCollectionView?.delegate = self
+        itemsCollectionView?.dataSource = self
+        categoryCollectionView?.register(UINib(nibName: "ItemsCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCategoryCollectionViewCell")
+        categoryCollectionView?.delegate = self
+        categoryCollectionView?.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 }
@@ -33,7 +40,7 @@ extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSo
             return categoriesCollectionViewCells[section].items.count
         }
     }
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if (collectionView == itemsCollectionView){
             return itemsCollectionViewCell.count
@@ -41,7 +48,7 @@ extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSo
             return categoriesCollectionViewCells.count
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == itemsCollectionView) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCollectionViewCell", for: indexPath) as! ItemsCollectionViewCell
@@ -55,7 +62,7 @@ extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSo
             return cell2
         }
     }
-
-
+    
+    
 }
 
