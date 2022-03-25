@@ -28,6 +28,41 @@ class ItemsViewController: UIViewController {
         categoryCollectionView?.delegate = self
         categoryCollectionView?.dataSource = self
         
+        var itemsViewItemModelArray:[CollectionViewItemModel] = []
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
+        itemsCollectionViewCell.append(CollectionViewModel(items: itemsViewItemModelArray))
+        
+        var categoriesModelArray:[CollectionViewItemModel] = []
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
+        categoriesCollectionViewCells.append(CollectionViewModel(items: categoriesModelArray))
+        
+        
         // Do any additional setup after loading the view.
     }
 }

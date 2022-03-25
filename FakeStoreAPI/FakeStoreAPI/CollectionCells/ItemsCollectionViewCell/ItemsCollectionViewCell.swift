@@ -21,6 +21,9 @@ class ItemsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.imageView?.layer.masksToBounds = true
+        self.imageView?.layer.cornerRadius = self.imageView!.frame.width/30.0
+        
     }
     
     func setupCell(cellModel: CollectionViewItemModel) {
