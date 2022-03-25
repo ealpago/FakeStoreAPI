@@ -27,18 +27,9 @@ class ItemsViewController: UIViewController {
         categoryCollectionView?.register(UINib(nibName: "ItemsCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCategoryCollectionViewCell")
         categoryCollectionView?.delegate = self
         categoryCollectionView?.dataSource = self
-        
-//        var itemsViewItemModelArray:[CollectionViewItemModel] = []
-//        for _ in 0...30 {
-//            itemsViewItemModelArray.append(CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: "kategori", label: "damacana", price: "tl12"))
-//        }
-//        itemsCollectionViewCell.append(CollectionViewModel(items: itemsViewItemModelArray))
-        
-//        var categoriesModelArray:[CollectionViewItemModel] = []
-//        for _ in 0...30 {
-//            categoriesModelArray.append(CollectionViewItemModel(cellType: .label, imageView: nil, category: "Kategori", label: nil, price: nil))
-//        }
-//        categoriesCollectionViewCells.append(CollectionViewModel(items: categoriesModelArray))
+    
+        let button = BaseButton()
+        button.layer.cornerRadius
         
         managingData()
         managingCategoryLabelData()
