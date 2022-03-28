@@ -41,11 +41,11 @@ public enum NetworkRouter{
     public var path:String{
         switch self {
         case .products:
-            return APIConstants.shared.fakeStoreBaseURL + "products"
+            return "https://raw.githubusercontent.com/ealpago/apiJson/master/fakeStore.json"
         case .productByID(let id):
             return APIConstants.shared.fakeStoreBaseURL + "products/\(id)"
         case .getCategories:
-            return APIConstants.shared.fakeStoreBaseURL + "products/categories"
+            return "https://raw.githubusercontent.com/ealpago/apiCategories/master/apiCategories.json"
         case .productByCategories(let category):
             return APIConstants.shared.fakeStoreBaseURL + "products/category/\(category)"
         case .productLimit(let limit):

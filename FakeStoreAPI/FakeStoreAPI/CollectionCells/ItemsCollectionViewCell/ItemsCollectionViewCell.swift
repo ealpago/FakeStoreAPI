@@ -15,6 +15,7 @@ class ItemsCollectionViewCell: UICollectionViewCell {
     @IBOutlet var weightLabel: UILabel?
     @IBOutlet var addButton: UIButton!
     @IBOutlet var minusButton: UIButton!
+    @IBOutlet var buttonsView: UIView?
     private var itemModel: CollectionViewItemModel?
     
     
@@ -23,7 +24,9 @@ class ItemsCollectionViewCell: UICollectionViewCell {
         // Initialization code
         self.imageView?.layer.masksToBounds = true
         self.imageView?.layer.cornerRadius = self.imageView!.frame.width/30.0
-        
+        self.imageView?.layer.borderWidth = 0.1
+        self.buttonsView?.dropShadow()
+        self.buttonsView?.layer.cornerRadius = self.buttonsView!.frame.width/4.5
     }
     
     func setupCell(cellModel: CollectionViewItemModel) {

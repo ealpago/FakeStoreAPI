@@ -30,6 +30,7 @@
 		D16489FF27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16489FD27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift */; };
 		D1648A0027ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16489FE27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib */; };
 		D18BC09627EDF3C10079FAEB /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */; };
+		D1B25B0F27F1AE720018AFD3 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B25B0E27F1AE720018AFD3 /* DropShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D16489FD27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D16489FE27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		D1B25B0E27F1AE720018AFD3 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */,
+				D1B25B0E27F1AE720018AFD3 /* DropShadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				D111E1A827E87302001C23E2 /* AppDelegate.swift in Sources */,
 				D111E1CE27E9B57B001C23E2 /* ImageCollectionViewCell.swift in Sources */,
 				D111E1D927E9D1E9001C23E2 /* CollectionViewModel.swift in Sources */,
+				D1B25B0F27F1AE720018AFD3 /* DropShadow.swift in Sources */,
 				D16489FB27EC60C700B0A603 /* ItemsCollectionViewCell.swift in Sources */,
 				D111E1C027E874C4001C23E2 /* NetworkServices.swift in Sources */,
 				D16489F527EC58ED00B0A603 /* ItemsViewController.swift in Sources */,

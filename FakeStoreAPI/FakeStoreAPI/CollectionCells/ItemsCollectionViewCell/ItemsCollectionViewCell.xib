@@ -95,6 +95,7 @@
             <size key="customSize" width="268" height="289"/>
             <connections>
                 <outlet property="addButton" destination="p5J-oW-Iy1" id="tY1-43-id4"/>
+                <outlet property="buttonsView" destination="DFb-1B-VeM" id="aUR-jr-38e"/>
                 <outlet property="imageView" destination="YsN-TJ-ika" id="S2l-ON-gx2"/>
                 <outlet property="itemLabel" destination="FAm-wf-Gl4" id="asy-Qu-yeo"/>
                 <outlet property="minusButton" destination="FlS-yJ-qb4" id="TUK-aV-XmD"/>
