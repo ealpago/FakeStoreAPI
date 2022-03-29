@@ -29,10 +29,9 @@ class ItemsViewController: UIViewController {
         
 //        var countOfCategories = categoriesCollectionViewCells.count
         
-        for index in 1...4 {
+        for _ in 0...3 {
             let storyboard = UIStoryboard(name: "ElectronicsStoryBoard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ElectronicsPageViewController") as! ElectronicsPageViewController
-            vc.titleLabel?.text = "\(index)"
             list.append(vc)
         }
         
@@ -46,7 +45,7 @@ class ItemsViewController: UIViewController {
         categoryCollectionView?.register(UINib(nibName: "ItemsCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCategoryCollectionViewCell")
         categoryCollectionView?.delegate = self
         categoryCollectionView?.dataSource = self
-                
+        
         managingCategoryLabelData()
     }
     
@@ -82,6 +81,11 @@ extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSo
         let cell2Model = categoriesCollectionViewCells[indexPath.section].items[indexPath.row]!
         cell2.setupCell(cellModel: cell2Model)
         return cell2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Selected index = \(indexPath.row)")
+        pageViewController?.setViewControllers([list[indexPath.row]], direction: .forward, animated: true, completion: nil)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

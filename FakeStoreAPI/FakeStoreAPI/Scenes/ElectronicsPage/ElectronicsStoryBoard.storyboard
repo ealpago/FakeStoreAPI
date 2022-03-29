@@ -20,30 +20,28 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dB4-I3-AHU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-mh-mTQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="bL9-9T-b3y"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plH-nQ-g2D">
+                                                <rect key="frame" x="10" y="10" width="67" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                    <color key="baseBackgroundColor" red="0.46666666670000001" green="0.28235294119999998" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="AJe-mh-mTQ" firstAttribute="top" secondItem="dB4-I3-AHU" secondAttribute="top" id="2Wd-uu-NeY"/>
-                                            <constraint firstAttribute="height" constant="60" id="J8d-Hf-Rj8"/>
-                                            <constraint firstItem="AJe-mh-mTQ" firstAttribute="leading" secondItem="dB4-I3-AHU" secondAttribute="leading" id="dXF-Xc-mhm"/>
-                                            <constraint firstAttribute="trailing" secondItem="AJe-mh-mTQ" secondAttribute="trailing" id="hpF-QM-Hcw"/>
+                                            <constraint firstAttribute="height" constant="50" id="J8d-Hf-Rj8"/>
+                                            <constraint firstAttribute="bottom" secondItem="plH-nQ-g2D" secondAttribute="bottom" constant="10" id="UNI-YF-65N"/>
+                                            <constraint firstItem="plH-nQ-g2D" firstAttribute="leading" secondItem="dB4-I3-AHU" secondAttribute="leading" constant="10" id="eBL-RH-436"/>
+                                            <constraint firstItem="plH-nQ-g2D" firstAttribute="top" secondItem="dB4-I3-AHU" secondAttribute="top" constant="10" id="grB-bH-Ex2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unW-q1-GQD">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="792"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="802"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-Ve-8hL">
-                                                <rect key="frame" x="10" y="0.0" width="394" height="792"/>
+                                                <rect key="frame" x="10" y="0.0" width="394" height="802"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dCS-IL-8aA">
                                                     <size key="itemSize" width="110" height="170"/>
@@ -75,7 +73,6 @@
                     </view>
                     <connections>
                         <outlet property="electronicsCollectionView" destination="itJ-Ve-8hL" id="exa-Xy-ruS"/>
-                        <outlet property="titleLabel" destination="AJe-mh-mTQ" id="Cwn-xi-N0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

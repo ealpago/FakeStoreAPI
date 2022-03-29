@@ -10,7 +10,6 @@ import UIKit
 class ElectronicsPageViewController: UIViewController {
     
     @IBOutlet var electronicsCollectionView: UICollectionView?
-    @IBOutlet var titleLabel:UILabel?
     
     var electronicsCollectionViewCells:[CollectionViewModel] = []
     
