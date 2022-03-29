@@ -11,7 +11,7 @@
         <!--Electronics Page View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ElectronicsPageViewController" id="Y6W-OH-hqX" customClass="ElectronicsPageViewController" customModule="FakeStoreAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ElectronicsPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ElectronicsPageViewController" customModule="FakeStoreAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,9 +21,23 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dB4-I3-AHU">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-mh-mTQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="bL9-9T-b3y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
+                                            <constraint firstItem="AJe-mh-mTQ" firstAttribute="top" secondItem="dB4-I3-AHU" secondAttribute="top" id="2Wd-uu-NeY"/>
                                             <constraint firstAttribute="height" constant="60" id="J8d-Hf-Rj8"/>
+                                            <constraint firstItem="AJe-mh-mTQ" firstAttribute="leading" secondItem="dB4-I3-AHU" secondAttribute="leading" id="dXF-Xc-mhm"/>
+                                            <constraint firstAttribute="trailing" secondItem="AJe-mh-mTQ" secondAttribute="trailing" id="hpF-QM-Hcw"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unW-q1-GQD">
@@ -60,10 +74,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="L65-mB-VyT" secondAttribute="bottom" id="bWy-95-rsd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="electronicsCollectionView" destination="itJ-Ve-8hL" id="exa-Xy-ruS"/>
+                        <outlet property="titleLabel" destination="AJe-mh-mTQ" id="Cwn-xi-N0k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="100"/>
+            <point key="canvasLocation" x="57.971014492753625" y="99.776785714285708"/>
         </scene>
     </scenes>
     <resources>

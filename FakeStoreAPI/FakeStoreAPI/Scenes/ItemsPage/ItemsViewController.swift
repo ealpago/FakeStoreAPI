@@ -30,9 +30,10 @@ class ItemsViewController: UIViewController {
         pageViewController?.delegate = self
         pageViewController?.dataSource = self
         
-        for _ in 1 ... 5 {
-            let vc = UIViewController()
-            vc.view.backgroundColor = randomColor()
+        for index in 1...5{
+            let storyboard = UIStoryboard(name: "ElectronicsStoryBoard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ElectronicsPageViewController") as! ElectronicsPageViewController
+            vc.titleLabel?.text = "\(index)"
             list.append(vc)
         }
 
