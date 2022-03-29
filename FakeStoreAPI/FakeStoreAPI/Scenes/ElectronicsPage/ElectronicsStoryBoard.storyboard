@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L65-mB-VyT" userLabel="Master Stack View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dB4-I3-AHU">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -40,10 +40,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unW-q1-GQD">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="758"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="792"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-Ve-8hL">
-                                                <rect key="frame" x="5" y="0.0" width="404" height="758"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-Ve-8hL">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="792"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dCS-IL-8aA">
                                                     <size key="itemSize" width="110" height="170"/>
@@ -57,8 +57,8 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="itJ-Ve-8hL" secondAttribute="bottom" id="BE8-qL-mDT"/>
                                             <constraint firstItem="itJ-Ve-8hL" firstAttribute="top" secondItem="unW-q1-GQD" secondAttribute="top" id="Pmb-Ff-Jwq"/>
-                                            <constraint firstAttribute="trailing" secondItem="itJ-Ve-8hL" secondAttribute="trailing" constant="5" id="h9O-c6-lfE"/>
-                                            <constraint firstItem="itJ-Ve-8hL" firstAttribute="leading" secondItem="unW-q1-GQD" secondAttribute="leading" constant="5" id="krF-jq-yUR"/>
+                                            <constraint firstAttribute="trailing" secondItem="itJ-Ve-8hL" secondAttribute="trailing" constant="10" id="h9O-c6-lfE"/>
+                                            <constraint firstItem="itJ-Ve-8hL" firstAttribute="leading" secondItem="unW-q1-GQD" secondAttribute="leading" constant="10" id="krF-jq-yUR"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -70,7 +70,7 @@
                             <constraint firstItem="L65-mB-VyT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9Eu-dV-WYF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="L65-mB-VyT" secondAttribute="trailing" id="PWY-4T-x8I"/>
                             <constraint firstItem="L65-mB-VyT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Xdr-FO-AdV"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="L65-mB-VyT" secondAttribute="bottom" id="bWy-95-rsd"/>
+                            <constraint firstAttribute="bottom" secondItem="L65-mB-VyT" secondAttribute="bottom" id="bWy-95-rsd"/>
                         </constraints>
                     </view>
                     <connections>

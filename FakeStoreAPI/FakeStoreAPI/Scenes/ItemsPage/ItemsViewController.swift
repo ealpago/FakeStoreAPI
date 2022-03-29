@@ -27,7 +27,9 @@ class ItemsViewController: UIViewController {
         pageViewController?.delegate = self
         pageViewController?.dataSource = self
         
-        for index in 1...5{
+//        var countOfCategories = categoriesCollectionViewCells.count
+        
+        for index in 1...4 {
             let storyboard = UIStoryboard(name: "ElectronicsStoryBoard", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ElectronicsPageViewController") as! ElectronicsPageViewController
             vc.titleLabel?.text = "\(index)"
@@ -44,9 +46,7 @@ class ItemsViewController: UIViewController {
         categoryCollectionView?.register(UINib(nibName: "ItemsCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCategoryCollectionViewCell")
         categoryCollectionView?.delegate = self
         categoryCollectionView?.dataSource = self
-        
-        _ = BaseButton()
-        
+                
         managingCategoryLabelData()
     }
     

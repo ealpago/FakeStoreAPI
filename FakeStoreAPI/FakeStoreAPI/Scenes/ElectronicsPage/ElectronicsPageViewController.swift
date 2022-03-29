@@ -51,7 +51,6 @@ extension ElectronicsPageViewController: UICollectionViewDelegate, UICollectionV
         return electronicsCollectionViewCells.count
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCollectionViewCell", for: indexPath) as! ItemsCollectionViewCell
         let cellModel = electronicsCollectionViewCells[indexPath.section].items[indexPath.row]!
