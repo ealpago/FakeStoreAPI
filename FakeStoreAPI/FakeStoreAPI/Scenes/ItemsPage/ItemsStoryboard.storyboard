@@ -47,84 +47,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xig-Ea-a36">
                                         <rect key="frame" x="0.0" y="60" width="414" height="792"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-zg-IEA">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gft-gd-Hbx" customClass="BaseButton" customModule="FakeStoreAPI" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="15" width="67" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
-                                                            <color key="baseBackgroundColor" red="0.40437198839999999" green="0.24620817049999999" blue="0.68892788169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="Gft-gd-Hbx" firstAttribute="top" secondItem="dPR-zg-IEA" secondAttribute="top" constant="15" id="HON-Tq-cn6"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Gft-gd-Hbx" secondAttribute="bottom" constant="15" id="Iaw-9M-7CC"/>
-                                                    <constraint firstItem="Gft-gd-Hbx" firstAttribute="leading" secondItem="dPR-zg-IEA" secondAttribute="leading" constant="10" id="SrK-Av-sI7"/>
-                                                    <constraint firstAttribute="height" constant="60" id="XIN-i2-bK9"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-vC-HtP">
-                                                <rect key="frame" x="0.0" y="60" width="414" height="732"/>
-                                                <subviews>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-Ji-3aR" userLabel="Items Collection View">
-                                                        <rect key="frame" x="10" y="5" width="394" height="727"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bes-TD-1Tl">
-                                                            <size key="itemSize" width="110" height="170"/>
-                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        </collectionViewFlowLayout>
-                                                        <view key="backgroundView" contentMode="scaleToFill" id="DS4-m5-zXo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="727"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HRd-jO-Vnw" userLabel="Items Collection View">
-                                                                    <rect key="frame" x="10" y="5" width="374" height="722"/>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vrl-BZ-ksI">
-                                                                        <size key="itemSize" width="110" height="170"/>
-                                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                    </collectionViewFlowLayout>
-                                                                    <cells/>
-                                                                </collectionView>
-                                                            </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="HRd-jO-Vnw" secondAttribute="trailing" constant="10" id="5Vt-sR-Z2B"/>
-                                                                <constraint firstItem="HRd-jO-Vnw" firstAttribute="top" secondItem="DS4-m5-zXo" secondAttribute="top" constant="5" id="9z6-Qp-lqf"/>
-                                                                <constraint firstItem="HRd-jO-Vnw" firstAttribute="leading" secondItem="DS4-m5-zXo" secondAttribute="leading" constant="10" id="eWG-i0-1cb"/>
-                                                                <constraint firstAttribute="bottom" secondItem="HRd-jO-Vnw" secondAttribute="bottom" id="oBZ-gE-URx"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <cells/>
-                                                    </collectionView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="n7e-Ji-3aR" firstAttribute="top" secondItem="SGR-vC-HtP" secondAttribute="top" constant="5" id="CD0-an-9Hd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="n7e-Ji-3aR" secondAttribute="bottom" id="KAl-R4-94w"/>
-                                                    <constraint firstItem="n7e-Ji-3aR" firstAttribute="leading" secondItem="SGR-vC-HtP" secondAttribute="leading" constant="10" id="a5G-yX-XaD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="n7e-Ji-3aR" secondAttribute="trailing" constant="10" id="b3n-0V-ibQ"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="SGR-vC-HtP" secondAttribute="bottom" id="5jv-ak-Lxe"/>
-                                            <constraint firstItem="SGR-vC-HtP" firstAttribute="leading" secondItem="xig-Ea-a36" secondAttribute="leading" id="Q0C-cI-xpP"/>
-                                            <constraint firstItem="dPR-zg-IEA" firstAttribute="top" secondItem="xig-Ea-a36" secondAttribute="top" id="aPt-dP-59i"/>
-                                            <constraint firstItem="dPR-zg-IEA" firstAttribute="leading" secondItem="xig-Ea-a36" secondAttribute="leading" id="hA1-Qw-Aap"/>
-                                            <constraint firstItem="SGR-vC-HtP" firstAttribute="top" secondItem="dPR-zg-IEA" secondAttribute="bottom" id="kvc-Na-15E"/>
-                                            <constraint firstAttribute="trailing" secondItem="dPR-zg-IEA" secondAttribute="trailing" id="tNd-Kg-wYB"/>
-                                            <constraint firstAttribute="trailing" secondItem="SGR-vC-HtP" secondAttribute="trailing" id="tUh-XR-Bcr"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -140,8 +63,6 @@
                     </view>
                     <connections>
                         <outlet property="categoryCollectionView" destination="uag-GS-fwc" id="X99-pN-OmD"/>
-                        <outlet property="filledButton" destination="Gft-gd-Hbx" id="5Wp-rf-NiJ"/>
-                        <outlet property="itemsCollectionView" destination="n7e-Ji-3aR" id="IrX-IP-5uG"/>
                         <outlet property="viewPager" destination="xig-Ea-a36" id="RKV-9g-PrF"/>
                     </connections>
                 </viewController>
