@@ -142,6 +142,7 @@
                         <outlet property="categoryCollectionView" destination="uag-GS-fwc" id="X99-pN-OmD"/>
                         <outlet property="filledButton" destination="Gft-gd-Hbx" id="5Wp-rf-NiJ"/>
                         <outlet property="itemsCollectionView" destination="n7e-Ji-3aR" id="IrX-IP-5uG"/>
+                        <outlet property="viewPager" destination="xig-Ea-a36" id="RKV-9g-PrF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

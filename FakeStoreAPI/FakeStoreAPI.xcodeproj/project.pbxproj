@@ -31,6 +31,15 @@
 		D1648A0027ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16489FE27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib */; };
 		D18BC09627EDF3C10079FAEB /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */; };
 		D1B25B0F27F1AE720018AFD3 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B25B0E27F1AE720018AFD3 /* DropShadow.swift */; };
+		D1B25B3327F2F7940018AFD3 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B25B3227F2F7940018AFD3 /* RandomColor.swift */; };
+		D1B25B3727F30EFB0018AFD3 /* ElectronicsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B25B3627F30EFB0018AFD3 /* ElectronicsStoryBoard.storyboard */; };
+		D1B25B3A27F30F980018AFD3 /* ElectronicsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B25B3927F30F980018AFD3 /* ElectronicsPageViewController.swift */; };
+		D1B25B3E27F311200018AFD3 /* JeweleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B25B3C27F311200018AFD3 /* JeweleryViewController.swift */; };
+		D1B25B4127F311450018AFD3 /* JeweleryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B25B4027F311450018AFD3 /* JeweleryStoryboard.storyboard */; };
+		D1B25B4427F3122C0018AFD3 /* MensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B25B4327F3122C0018AFD3 /* MensViewController.swift */; };
+		D1B25B4627F312370018AFD3 /* MensStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B25B4527F312370018AFD3 /* MensStoryboard.storyboard */; };
+		D1B25B4927F3126D0018AFD3 /* WomensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B25B4827F3126D0018AFD3 /* WomensViewController.swift */; };
+		D1B25B4B27F312750018AFD3 /* WomensStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B25B4A27F312750018AFD3 /* WomensStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +69,15 @@
 		D16489FE27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		D18BC09527EDF3C10079FAEB /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		D1B25B0E27F1AE720018AFD3 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
+		D1B25B3227F2F7940018AFD3 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
+		D1B25B3627F30EFB0018AFD3 /* ElectronicsStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ElectronicsStoryBoard.storyboard; sourceTree = "<group>"; };
+		D1B25B3927F30F980018AFD3 /* ElectronicsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronicsPageViewController.swift; sourceTree = "<group>"; };
+		D1B25B3C27F311200018AFD3 /* JeweleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeweleryViewController.swift; sourceTree = "<group>"; };
+		D1B25B4027F311450018AFD3 /* JeweleryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JeweleryStoryboard.storyboard; sourceTree = "<group>"; };
+		D1B25B4327F3122C0018AFD3 /* MensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensViewController.swift; sourceTree = "<group>"; };
+		D1B25B4527F312370018AFD3 /* MensStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MensStoryboard.storyboard; sourceTree = "<group>"; };
+		D1B25B4827F3126D0018AFD3 /* WomensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomensViewController.swift; sourceTree = "<group>"; };
+		D1B25B4A27F312750018AFD3 /* WomensStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WomensStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +138,10 @@
 		D111E1BD27E873FB001C23E2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D1B25B4727F312570018AFD3 /* WomensPage */,
+				D1B25B4227F311E20018AFD3 /* MensPage */,
+				D1B25B3B27F311070018AFD3 /* JeweleryPages */,
+				D1B25B3827F30F040018AFD3 /* ElectronicsPage */,
 				D16489F327EC587E00B0A603 /* ItemsPage */,
 				D111E1C727E88036001C23E2 /* ProductsPage */,
 			);
@@ -185,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				D159FBA327EE0A20007919D5 /* BaseButton.swift */,
+				D1B25B3227F2F7940018AFD3 /* RandomColor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -223,6 +246,42 @@
 				D1B25B0E27F1AE720018AFD3 /* DropShadow.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D1B25B3827F30F040018AFD3 /* ElectronicsPage */ = {
+			isa = PBXGroup;
+			children = (
+				D1B25B3927F30F980018AFD3 /* ElectronicsPageViewController.swift */,
+				D1B25B3627F30EFB0018AFD3 /* ElectronicsStoryBoard.storyboard */,
+			);
+			path = ElectronicsPage;
+			sourceTree = "<group>";
+		};
+		D1B25B3B27F311070018AFD3 /* JeweleryPages */ = {
+			isa = PBXGroup;
+			children = (
+				D1B25B3C27F311200018AFD3 /* JeweleryViewController.swift */,
+				D1B25B4027F311450018AFD3 /* JeweleryStoryboard.storyboard */,
+			);
+			path = JeweleryPages;
+			sourceTree = "<group>";
+		};
+		D1B25B4227F311E20018AFD3 /* MensPage */ = {
+			isa = PBXGroup;
+			children = (
+				D1B25B4327F3122C0018AFD3 /* MensViewController.swift */,
+				D1B25B4527F312370018AFD3 /* MensStoryboard.storyboard */,
+			);
+			path = MensPage;
+			sourceTree = "<group>";
+		};
+		D1B25B4727F312570018AFD3 /* WomensPage */ = {
+			isa = PBXGroup;
+			children = (
+				D1B25B4827F3126D0018AFD3 /* WomensViewController.swift */,
+				D1B25B4A27F312750018AFD3 /* WomensStoryboard.storyboard */,
+			);
+			path = WomensPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,12 +342,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B25B4B27F312750018AFD3 /* WomensStoryboard.storyboard in Resources */,
 				D111E1B427E87303001C23E2 /* LaunchScreen.storyboard in Resources */,
 				D111E1D427E9B77D001C23E2 /* CategoriesCollectionViewCell.xib in Resources */,
 				D16489F727EC590600B0A603 /* ItemsStoryboard.storyboard in Resources */,
 				D1648A0027ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.xib in Resources */,
+				D1B25B4627F312370018AFD3 /* MensStoryboard.storyboard in Resources */,
 				D111E1B127E87303001C23E2 /* Assets.xcassets in Resources */,
 				D111E1CF27E9B57B001C23E2 /* ImageCollectionViewCell.xib in Resources */,
+				D1B25B4127F311450018AFD3 /* JeweleryStoryboard.storyboard in Resources */,
+				D1B25B3727F30EFB0018AFD3 /* ElectronicsStoryBoard.storyboard in Resources */,
 				D16489FC27EC60C700B0A603 /* ItemsCollectionViewCell.xib in Resources */,
 				D111E1AF27E87302001C23E2 /* Main.storyboard in Resources */,
 			);
@@ -303,18 +366,23 @@
 			files = (
 				D111E1D327E9B77D001C23E2 /* CategoriesCollectionViewCell.swift in Sources */,
 				D159FBA427EE0A20007919D5 /* BaseButton.swift in Sources */,
+				D1B25B3E27F311200018AFD3 /* JeweleryViewController.swift in Sources */,
 				D111E1C227E877DD001C23E2 /* Constants.swift in Sources */,
 				D111E1A827E87302001C23E2 /* AppDelegate.swift in Sources */,
 				D111E1CE27E9B57B001C23E2 /* ImageCollectionViewCell.swift in Sources */,
 				D111E1D927E9D1E9001C23E2 /* CollectionViewModel.swift in Sources */,
 				D1B25B0F27F1AE720018AFD3 /* DropShadow.swift in Sources */,
 				D16489FB27EC60C700B0A603 /* ItemsCollectionViewCell.swift in Sources */,
+				D1B25B3327F2F7940018AFD3 /* RandomColor.swift in Sources */,
 				D111E1C027E874C4001C23E2 /* NetworkServices.swift in Sources */,
 				D16489F527EC58ED00B0A603 /* ItemsViewController.swift in Sources */,
 				D18BC09627EDF3C10079FAEB /* UIImageViewExtension.swift in Sources */,
 				D111E1C427E87B3D001C23E2 /* FakeAPIResponse.swift in Sources */,
+				D1B25B3A27F30F980018AFD3 /* ElectronicsPageViewController.swift in Sources */,
 				D111E1AA27E87302001C23E2 /* SceneDelegate.swift in Sources */,
+				D1B25B4927F3126D0018AFD3 /* WomensViewController.swift in Sources */,
 				D16489FF27ECAB4800B0A603 /* ItemsCategoryCollectionViewCell.swift in Sources */,
+				D1B25B4427F3122C0018AFD3 /* MensViewController.swift in Sources */,
 				D111E1C927E88062001C23E2 /* ProductsPageViewController.swift in Sources */,
 				D111E1C627E87B86001C23E2 /* Rating.swift in Sources */,
 			);

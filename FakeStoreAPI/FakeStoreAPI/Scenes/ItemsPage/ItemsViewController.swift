@@ -12,6 +12,9 @@ class ItemsViewController: UIViewController {
     @IBOutlet var categoryCollectionView: UICollectionView?
     @IBOutlet var itemsCollectionView: UICollectionView?
     @IBOutlet var filledButton: UIButton?
+    @IBOutlet var pageViewController: UIPageViewController?
+    @IBOutlet var viewPager: UIView?
+    var list:[UIViewController] = []
     
     var itemsCollectionViewCell:[CollectionViewModel] = []
     var categoriesCollectionViewCells:[CollectionViewModel] = []
@@ -20,6 +23,25 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "ürünler"
         self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        let option: [UIPageViewController.OptionsKey:UIPageViewController.SpineLocation] = [UIPageViewController.OptionsKey.spineLocation: UIPageViewController.SpineLocation.max]
+
+        pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: option)
+        pageViewController?.delegate = self
+        pageViewController?.dataSource = self
+        
+        for _ in 1 ... 5 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = randomColor()
+            list.append(vc)
+        }
+
+        pageViewController?.setViewControllers([list[0]], direction: .forward, animated: false, completion: nil)
+        pageViewController?.view.frame = viewPager?.bounds ?? .zero
+        
+        self.addChild(pageViewController!)
+        viewPager?.addSubview((pageViewController?.view)!)
+        pageViewController?.didMove(toParent: self)
         
         itemsCollectionView?.register(UINib(nibName: "ItemsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCollectionViewCell")
         itemsCollectionView?.delegate = self
@@ -68,7 +90,7 @@ class ItemsViewController: UIViewController {
     }
 }
 
-extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == itemsCollectionView){
             return itemsCollectionViewCell[section].items.count
@@ -97,6 +119,28 @@ extension ItemsViewController:  UICollectionViewDelegate, UICollectionViewDataSo
             cell2.setupCell(cellModel: cell2Model)
             return cell2
         }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        if let index = list.firstIndex(of: viewController) {
+            if index > 0 {
+                return list[index - 1]
+            } else {
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        if let index = list.firstIndex(of: viewController) {
+            if index < list.count - 1 {
+                return list[index + 1]
+            } else {
+                return nil
+            }
+        }
+        return nil
     }
 }
 
