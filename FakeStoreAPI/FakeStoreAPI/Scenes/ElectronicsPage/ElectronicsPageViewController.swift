@@ -13,12 +13,12 @@ class ElectronicsPageViewController: UIViewController {
     @IBOutlet var titleLabel:UILabel?
     
     var electronicsCollectionViewCells:[CollectionViewModel] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         managingData()
-
+        
         electronicsCollectionView?.register(UINib(nibName: "ItemsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCollectionViewCell")
         electronicsCollectionView?.dataSource = self
         electronicsCollectionView?.delegate = self
@@ -48,7 +48,7 @@ extension ElectronicsPageViewController: UICollectionViewDelegate, UICollectionV
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-            return electronicsCollectionViewCells.count
+        return electronicsCollectionViewCells.count
     }
     
     
@@ -57,6 +57,6 @@ extension ElectronicsPageViewController: UICollectionViewDelegate, UICollectionV
         let cellModel = electronicsCollectionViewCells[indexPath.section].items[indexPath.row]!
         cell.setupCell(cellModel: cellModel)
         return cell
-
+        
     }
 }
