@@ -16,9 +16,12 @@ class ElectronicsPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        electronicsCollectionView?.dataSource = self
-//        electronicsCollectionView?.delegate = self
+        
+        managingData()
+
+        electronicsCollectionView?.register(UINib(nibName: "ItemsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCollectionViewCell")
+        electronicsCollectionView?.dataSource = self
+        electronicsCollectionView?.delegate = self
     }
     
     func managingData(){
@@ -39,14 +42,21 @@ class ElectronicsPageViewController: UIViewController {
     }
 }
 
-//extension ElectronicsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        <#code#>
-//    }
-//    
-//    
-//}
+extension ElectronicsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return electronicsCollectionViewCells[section].items.count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+            return electronicsCollectionViewCells.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCollectionViewCell", for: indexPath) as! ItemsCollectionViewCell
+        let cellModel = electronicsCollectionViewCells[indexPath.section].items[indexPath.row]!
+        cell.setupCell(cellModel: cellModel)
+        return cell
+
+    }
+}
