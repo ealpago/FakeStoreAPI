@@ -14,7 +14,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView:UIImageView?
     
     private var itemModel: CollectionViewItemModel?
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +26,4 @@ class ImageCollectionViewCell: UICollectionViewCell {
             imageView?.image = UIImage(named: itemModel.imageView ?? "getir")
         }
     }
-
 }

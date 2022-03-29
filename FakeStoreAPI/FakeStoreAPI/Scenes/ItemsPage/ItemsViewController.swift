@@ -16,50 +16,6 @@ class ItemsViewController: UIViewController {
     var itemsCollectionViewCell:[CollectionViewModel] = []
     var categoriesCollectionViewCells:[CollectionViewModel] = []
     
-//    lazy var view0: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .clear
-//        let label = UILabel()
-//        label.text = "Kategori"
-//        label.textAlignment = .center
-//        view.addSubview(label)
-//        return view
-//    }()
-//    lazy var view1: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .clear
-//        let label = UILabel()
-//        label.text = "Kategori"
-//        label.textAlignment = .center
-//        view.addSubview(label)
-//        return view
-//    }()
-//    lazy var view2: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .clear
-//        let label = UILabel()
-//        label.text = "Kategori"
-//        label.textAlignment = .center
-//        view.addSubview(label)
-//        return view
-//    }()
-//
-//    lazy var views = [view0, view1, view2]
-//    
-//    lazy var categoryCollectionViewExample: UICollectionView = {
-//        let collectionView = UICollectionView()
-//        collectionView.showsHorizontalScrollIndicator = false
-//        collectionView.isPagingEnabled = true
-//        collectionView.contentSize = CGSize(width: view.frame.width * CGFloat(views.count) , height: view.frame.height)
-//        
-//        for i in 0..<views.count {
-//            collectionView.addSubview(views[i])
-//            views[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
-//        }
-//        collectionView.delegate = self
-//        return collectionView
-//    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "ürünler"
@@ -71,9 +27,8 @@ class ItemsViewController: UIViewController {
         categoryCollectionView?.register(UINib(nibName: "ItemsCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemsCategoryCollectionViewCell")
         categoryCollectionView?.delegate = self
         categoryCollectionView?.dataSource = self
-    
+        
         _ = BaseButton()
-//        button.layer.cornerRadius
         managingData()
         managingCategoryLabelData()
     }
@@ -81,9 +36,9 @@ class ItemsViewController: UIViewController {
     func managingData(){
         NetworkManager.service.request(requestRoute: .products, responseModel: [FakeAPIResponse].self) { [weak self] details in
             guard let self = self else {return}
-
+            
             var itemArray:[CollectionViewItemModel] = []
-
+            
             for item in details{
                 let itemModel = CollectionViewItemModel(cellType: .categories, imageView: "damacana2", category: item.category, label: item.title, price: "\(item.price ?? 15)")
                 itemArray.append(itemModel)
@@ -98,9 +53,9 @@ class ItemsViewController: UIViewController {
     func managingCategoryLabelData(){
         NetworkManager.service.request(requestRoute: .getCategories, responseModel: [String].self) { [weak self] details in
             guard let self = self else {return}
-
+            
             var categoryArray:[CollectionViewItemModel] = []
-
+            
             for item in details{
                 let categoryModel = CollectionViewItemModel(cellType: .label, imageView: nil, category: item, label: nil, price: nil)
                 categoryArray.append(categoryModel)
